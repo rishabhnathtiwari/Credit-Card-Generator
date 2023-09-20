@@ -1,0 +1,111 @@
+#credit-card {
+    position: absolute;
+    z-index: 999;
+    color: rgb(255, 255, 255);
+  }
+  
+  .front-card {
+    position: relative;
+    background: url("../Images/front.png") no-repeat center;
+    background-size: cover;
+    width: 26vmax;
+    height: 15vmax;
+    border-radius: 10px;
+    margin: 5vw 0 0 10vw;
+    border: 0;
+  }
+  .back-card {
+    position: relative;
+    background: url("../Images/back.png") no-repeat center;
+    background-size: cover;
+    width: 26vmax;
+    height: 15vmax;
+    border-radius: 10px;
+    margin: 5vw 0 0 15vw;
+    border: 0;
+  }
+  .card-number {
+    display: flex;
+    font-family: "Inter";
+    font-size: 1.45vw;
+    justify-content: center;
+    align-items: flex-end;
+    height: 70%;
+    letter-spacing: 5px;
+  }
+  .holder-name {
+    color: #ffffff;
+    text-transform: uppercase;
+    font-family: "Roboto";
+    font-size: 1vw;
+    letter-spacing: 4px;
+    font-weight: 600;
+    color: #ffffff;
+  }
+  
+  .card-dets {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: 1.5vmax;
+    padding: 0 3vw;
+  }
+  .card-dets span {
+    color: #ffffff;
+    font-family: "Roboto";
+    font-size: 1vw;
+    letter-spacing: 4px;
+    font-weight: 700;
+    color: #ffffff;
+  }
+  .card-cvc {
+    font-family: "Roboto";
+    font-size: 1vw;
+    letter-spacing: 2px;
+    font-weight: 700;
+    color: #ffffff;
+    position: absolute;
+    top: 7vw;
+    right: 4vw;
+  }
+  @media (max-width: 560px) {
+  
+    .front-card {
+      width: 28vmax;
+      height: 16vmax;
+      border-radius: 6px;
+      margin: 20vw 0 0 3vw;
+      border: 0;
+      z-index: 50;
+    }
+    .back-card {
+      position: relative;
+      background: url("../Images/back.png") no-repeat center;
+      background-size: cover;
+      width: 28vmax;
+      height: 16vmax;
+      border-radius: 6px;
+      transform: translateY(-50%);
+    }
+    .card-number {
+      font-size:3.2vw;
+      letter-spacing: 3px;
+    }
+    .holder-name {
+      font-size: 2vw;
+      font-weight: 700;
+    }
+    
+    .card-dets {
+      padding: 0 5vw;
+    }
+    .card-dets span {
+      font-size: 2vw;
+    }
+    .card-cvc {
+      font-size: 2vw;
+      top: 16vw;
+      right: 6vw;
+    }
+  }
+  
