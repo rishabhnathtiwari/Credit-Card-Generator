@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import CreditCard from "./CreditCard";
 import "../App.css";
 import sideImg from "../Images/Rectangle 1.png";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 
 function Form() {
@@ -19,6 +21,8 @@ function Form() {
     cvc: "",
   });
   const isMonth = /^(0[1-9]|1[0-2])$|^([1-9])$/;
+
+  const notify = () => toast("Successfully Submitted!");
   
   function handleSubmit(e) {
     e.preventDefault();
@@ -32,6 +36,9 @@ function Form() {
     if ((month.length === 0 || cvc.length === 0) && year.length === 0) {
       setError(true);
       hasError = true;
+    }
+    if (!hasError) {
+      notify();
     }
 
     
@@ -145,6 +152,18 @@ function Form() {
           <button className="confirm" onClick={handleClick}>
             confirm
           </button>
+          <ToastContainer
+            position="top-center"
+            autoClose={5000}
+            hideProgressBar={false}
+            newestOnTop={false}
+            closeOnClick
+            rtl={false}
+            pauseOnFocusLoss={false}
+            draggable={false}
+            pauseOnHover={false}
+            theme="light"
+          />
          
         </form>
       </div>
